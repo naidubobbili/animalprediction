@@ -1,0 +1,33 @@
+{% load static %}
+<title>Animal Prediction</title>
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+<nav class="navbar navbar-dark bg-dark">
+<div class="text-white"><h2>&nbsp Animal Prediction </h2></div>
+<div class="navbar-nav ml-auto">
+<p><button type="button" class="btn btn-primary">
+<a class="text-white" href="https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html" target="_blank">Documentation</a>
+</button>&nbsp&nbsp</p></div>
+</nav>
+<br>
+<br>
+
+<h1 class="container text-center">The Predicted Animal is {{ svmresult }}</h1>
+</br>
+<div class="container text-center">
+
+{% if svmresult == "Fox" %}
+<img src='https://wallpapercave.com/wp/wp4607553.jpg' width=500 height=500>
+{% endif %}
+
+
+{% if svmresult == "Lion" %}
+<img width=500 height=500 src='https://th.bing.com/th/id/R.e2bef85556fd16d7b6e06390287ec7e0?rik=aMEjEEJhiO8Z9w&riu=http%3a%2f%2f3.bp.blogspot.com%2f-C028ZQTlqAU%2fUPgjopkiaxI%2fAAAAAAAADl0%2f83K8u71Aa50%2fs1600%2flion.jpg&ehk=U6U6MW7zwOAN0WdX0XC3JEZp4IXsZIn%2f4w%2f2FrcYigE%3d&risl=&pid=ImgRaw&r=0'>
+{% endif %}
+{% if svmresult == "Elephant" %}
+<img width=500 height=500 src='https://wallpapercave.com/wp/wkTBuAA.jpg'>
+{% endif %}
+{% if svmresult == "Giraffe" %}
+<img width=500 height=500 src='https://images4.alphacoders.com/115/thumb-1920-115368.jpg'>
+{% endif %}
+</div>

@@ -1,0 +1,48 @@
+{% load static %}
+<title>Animal Prediction</title>
+
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+<nav class="navbar navbar-dark bg-dark">
+<div class="text-white"><h2><p style="font-size:70px">&nbsp Animal Prediction</p> </h2></div>
+<div class="navbar-nav ml-auto">
+<p><button type="button" class="btn btn-primary">
+<a class="text-white" href="https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html" target="_blank"><p style="font-size:30px" >Documentation</p></a>
+</button>&nbsp&nbsp</p></div>
+</nav>
+
+<br>
+<p style="font-size:40px">This is Support Vector Machine Classification Model which predicts the Animal based on given Weight and Height Values.</p>
+<p style="font-size:40px"> It's a Four Class model , The 4 Animals are Fox, Lion, Elephant, Giraffe.   <p>
+<br>
+<br>
+<br>
+<div class="container text-center" style="background-color:orange;">
+<form action="{% url 'animalresult' %}">
+<br>
+<br>
+<br>
+<br>
+<h1><p style="font-size:50px; color:white;">Enter Animal Weight(in kg)</p></h1>
+<br>
+
+<input style="font-size:30px" type='number' min=4 max=6500 name="Weight"  required> 
+<br>
+<br>
+<br>
+<h1><p style="font-size:50px; color:white;">Enter Animal Height(in cm)</p></h1>
+<br>
+<input style="font-size:30px" type='number' min=30 max=600 name="Height"  required> 
+<br>
+<br>
+<br>
+<br>
+<input  style="font-size:50px" class='btn btn-success' type='submit' name='submit' value="Predict Animal">
+<br>
+<br>
+<br>
+<br>
+<br>
+</form>
+</div>
+</div>
